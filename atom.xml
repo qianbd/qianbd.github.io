@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-06-01T13:36:40.364Z</updated>
+  <updated>2020-06-01T14:06:36.460Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>about</title>
+    <link href="http://yoursite.com/2020/06/01/about/"/>
+    <id>http://yoursite.com/2020/06/01/about/</id>
+    <published>2020-06-01T14:00:52.000Z</published>
+    <updated>2020-06-01T14:06:36.460Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote><p>A Coder, live in Hangzhou, China.</p></blockquote><p>姓名：gjw<br>昵称：千摆渡<br>现居：杭州某大学<br>QQ：1012198609</p><a id="more"></a><img src="https://i.loli.net/2020/06/01/fzOY4omdHrSBaj9.jpg" alt="avatar" width="300" style="border-radius:50%"/>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;A Coder, live in Hangzhou, China.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;姓名：gjw&lt;br&gt;昵称：千摆渡&lt;br&gt;现居：杭州某大学&lt;br&gt;QQ：1012198609&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>千摆渡的自我介绍</title>
