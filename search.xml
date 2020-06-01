@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>about</title>
+    <title>About me</title>
     <url>/2020/06/01/about/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
 <p>A Coder, live in Hangzhou, China.</p>
@@ -11,6 +11,9 @@
 
 <img src="https://i.loli.net/2020/06/01/fzOY4omdHrSBaj9.jpg" alt="avatar" width="300" style="border-radius:50%"/>
 ]]></content>
+      <tags>
+        <tag>闲话</tag>
+      </tags>
   </entry>
   <entry>
     <title>千摆渡的自我介绍</title>
