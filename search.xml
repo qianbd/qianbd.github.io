@@ -44,11 +44,26 @@
 </ul>
 <h4 id="2-行列式的性质"><a href="#2-行列式的性质" class="headerlink" title="2.行列式的性质"></a>2.行列式的性质</h4><ul>
 <li>转置行列式的值不变。即|A<sup>T</sup>| = |A|</li>
-<li>两行（或列）互换位置，行列式的值变号<blockquote>
+<li>两行（或列）互换位置，行列式的值<strong>变号</strong><blockquote>
 <p>两行（或列）相同，行列式的值为0</p>
 </blockquote>
 </li>
-<li></li>
+<li>某行（或列）有公因子k，可把k提出行列式（即用k乘行列式|A|等于k乘它的某行）</li>
+<li>某行（某列）是两个元素的和，可以拆成两个行列式之和</li>
+<li>某行（某列）的k倍加到另一行（或列），行列式的值不变</li>
+</ul>
+<h4 id="3-行列式的展开公式"><a href="#3-行列式的展开公式" class="headerlink" title="3.行列式的展开公式"></a>3.行列式的展开公式</h4><ul>
+<li>n阶行列式的值等于它的任何一行（列）元素，与其对应的代数余子式<strong>乘积</strong>之和<blockquote>
+<p>余子式：划去a<sub>ij</sub>所在的第i行，第j列，剩下的元素按原来的位置排法构成的n-1阶的行列式称为a<sub>ij</sub>的余子式，记为M<sub>ij</sub><br>代数余子式：(-1)<sup>i+j</sup>M<sub>ij</sub>为a<sub>ij</sub>的代数余子式，记为A<sub>ij</sub></p>
+</blockquote>
+</li>
+</ul>
+<h4 id="4-几个重要公式"><a href="#4-几个重要公式" class="headerlink" title="4.几个重要公式"></a>4.几个重要公式</h4><ul>
+<li>上（下）三角形行列式的值等于主对角线元素的乘积</li>
+<li>副对角线的行列式的值为(-1)<sup>${n(n+1)\over 2}$ </sup>a<sub>1n</sub>a<sub>2,n-1</sub>…a<sub>n1</sub></li>
+<li>拉普拉斯展开式：<br>$<br>\left|<br>  \begin{matrix}<pre><code>A &amp; * \\
+O &amp; B \\</code></pre>  \end{matrix}<br>\right|<br>$ =  $<br>\left|<br>  \begin{matrix}<pre><code>A &amp; O \\
+* &amp; B \\</code></pre>  \end{matrix}<br>\right|<br>$ = | A |·| B |</li>
 </ul>
 ]]></content>
       <categories>
