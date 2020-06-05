@@ -1,18 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>About me</title>
-    <url>/2020/06/01/about/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>A Coder, live in Hangzhou, China.</p>
-</blockquote>
-<p>姓名：gjw<br>昵称：千摆渡<br>现居：杭州某大学<br>QQ：1012198609</p>
-<a id="more"></a>
-
-<img src="https://i.loli.net/2020/06/01/fzOY4omdHrSBaj9.jpg" alt="avatar" width="300" style="border-radius:50%"/>
-]]></content>
-  </entry>
-  <entry>
     <title>千摆渡的自我介绍</title>
     <url>/2020/06/01/%E5%8D%83%E6%91%86%E6%B8%A1%E7%9A%84%E8%87%AA%E6%88%91%E4%BB%8B%E7%BB%8D/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>浙江某不知名高校一计算机科学与技术的咸鱼学生，啥都不会的学生，去过QHD，NJ，SY的icpc现场（有点点怀念），现在正在准备考研之中，偶尔网上冲浪，喜欢看动漫，韩剧（没想到吧），偶尔打打游戏，还喜欢运动，健身（hhh），喜欢的音乐很多，不一一列举了。家住绍兴某一不知名古镇（安昌古镇）边上，放一张图</p>
@@ -29,6 +17,44 @@
       </categories>
       <tags>
         <tag>自我介绍</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>About me</title>
+    <url>/2020/06/01/about/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>A Coder, live in Hangzhou, China.</p>
+</blockquote>
+<p>姓名：gjw<br>昵称：千摆渡<br>现居：杭州某大学<br>QQ：1012198609</p>
+<a id="more"></a>
+
+<img src="https://i.loli.net/2020/06/01/fzOY4omdHrSBaj9.jpg" alt="avatar" width="300" style="border-radius:50%"/>
+]]></content>
+  </entry>
+  <entry>
+    <title>行列式</title>
+    <url>/2020/06/05/%E8%A1%8C%E5%88%97%E5%BC%8F/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="1-排列"><a href="#1-排列" class="headerlink" title="1.排列"></a>1.排列</h4><ul>
+<li>偶排列：一个排列的逆序数是偶数</li>
+<li>奇排列：一个排列的逆序数是奇数<blockquote>
+<p>逆序数：一个排列中，一个大的数排在小的数之前，就称这两个数构成一个逆序。一个排列的逆序总数称为这个排列的逆序数。</p>
+</blockquote>
+</li>
+</ul>
+<h4 id="2-行列式的性质"><a href="#2-行列式的性质" class="headerlink" title="2.行列式的性质"></a>2.行列式的性质</h4><ul>
+<li>转置行列式的值不变。即|A<sup>T</sup>| = |A|</li>
+<li>两行（或列）互换位置，行列式的值变号<blockquote>
+<p>两行（或列）相同，行列式的值为0</p>
+</blockquote>
+</li>
+<li></li>
+</ul>
+]]></content>
+      <categories>
+        <category>线性代数</category>
+      </categories>
+      <tags>
+        <tag>行列式</tag>
       </tags>
   </entry>
 </search>
