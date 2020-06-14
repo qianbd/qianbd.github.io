@@ -1,36 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>百度云倍速.md</title>
-    <url>/2020/06/14/%E7%99%BE%E5%BA%A6%E4%BA%91%E5%80%8D%E9%80%9F/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>百度云盘播放倍速需要VIP，考研党看视频课一倍速太慢需要提提速，又不想用插件，使用这个试试吧</p>
-<a id="more"></a>
-<p>浏览器：Chrome，火狐等</p>
-<p>方法：打开检查中的console，以mac中的chrome为例如图：</p>
-<p>输入如下代码：</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">videojs.getPlayers(<span class="string">"video-player"</span>).html5player.tech_.setPlaybackRate(<span class="number">1.5</span>)</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>杂项</category>
-      </categories>
-      <tags>
-        <tag>杂项</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>About me</title>
-    <url>/2020/06/01/about/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>A Coder, live in Hangzhou, China.</p>
-</blockquote>
-<p>姓名：gjw<br>昵称：千摆渡<br>现居：杭州某大学<br>QQ：1012198609</p>
-<a id="more"></a>
-
-<img src="https://i.loli.net/2020/06/01/fzOY4omdHrSBaj9.jpg" alt="avatar" width="300" style="border-radius:50%"/>
-]]></content>
-  </entry>
-  <entry>
     <title>千摆渡的自我介绍</title>
     <url>/2020/06/01/%E5%8D%83%E6%91%86%E6%B8%A1%E7%9A%84%E8%87%AA%E6%88%91%E4%BB%8B%E7%BB%8D/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>浙江某不知名高校一计算机科学与技术的咸鱼学生，啥都不会的学生，去过QHD，NJ，SY的icpc现场（有点点怀念），现在正在准备考研之中，偶尔网上冲浪，喜欢看动漫，韩剧（没想到吧），偶尔打打游戏，还喜欢运动，健身（hhh），喜欢的音乐很多，不一一列举了。家住绍兴某一不知名古镇（安昌古镇）边上，放一张图</p>
@@ -47,6 +17,37 @@
       </categories>
       <tags>
         <tag>自我介绍</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>About me</title>
+    <url>/2020/06/01/about/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>A Coder, live in Hangzhou, China.</p>
+</blockquote>
+<p>姓名：gjw<br>昵称：千摆渡<br>现居：杭州某大学<br>QQ：1012198609</p>
+<a id="more"></a>
+
+<img src="https://i.loli.net/2020/06/01/fzOY4omdHrSBaj9.jpg" alt="avatar" width="300" style="border-radius:50%">
+]]></content>
+  </entry>
+  <entry>
+    <title>百度云倍速</title>
+    <url>/2020/06/14/%E7%99%BE%E5%BA%A6%E4%BA%91%E5%80%8D%E9%80%9F/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>百度云盘播放倍速需要VIP，考研党看视频课一倍速太慢需要提提速，又不想用插件，使用这个试试吧</p>
+<a id="more"></a>
+<p>浏览器：Chrome，火狐等</p>
+<p>方法：打开检查中的console，以mac中的chrome为例如图：<br><img src="/2020/06/14/%E7%99%BE%E5%BA%A6%E4%BA%91%E5%80%8D%E9%80%9F/hello.jpg" alt="你想输入的替代文字"></p>
+<p>输入如下代码：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">videojs.getPlayers(<span class="string">"video-player"</span>).html5player.tech_.setPlaybackRate(<span class="number">1.5</span>)</span><br></pre></td></tr></table></figure>
+
+<p>1.5就是倍速，可以根据自己的要求改变</p>
+<h3 id="PS：输入代码的时候必须要在视频播放的时候，现播放再放入代码并按下回车"><a href="#PS：输入代码的时候必须要在视频播放的时候，现播放再放入代码并按下回车" class="headerlink" title="PS：输入代码的时候必须要在视频播放的时候，现播放再放入代码并按下回车"></a>PS：输入代码的时候必须要在视频播放的时候，现播放再放入代码并按下回车</h3>]]></content>
+      <categories>
+        <category>杂项</category>
+      </categories>
+      <tags>
+        <tag>杂项</tag>
       </tags>
   </entry>
 </search>
