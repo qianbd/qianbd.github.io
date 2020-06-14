@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-06-14T15:23:55.554Z</updated>
+  <updated>2020-06-14T15:29:01.922Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://yoursite.com/2020/06/14/%E7%99%BE%E5%BA%A6%E4%BA%91%E5%80%8D%E9%80%9F/"/>
     <id>http://yoursite.com/2020/06/14/%E7%99%BE%E5%BA%A6%E4%BA%91%E5%80%8D%E9%80%9F/</id>
     <published>2020-06-14T13:43:09.000Z</published>
-    <updated>2020-06-14T15:23:55.554Z</updated>
+    <updated>2020-06-14T15:29:01.922Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>百度云盘播放倍速需要VIP，考研党看视频课一倍速太慢需要提提速，又不想用插件，使用这个试试吧</p><a id="more"></a><p>浏览器：Chrome，火狐等</p><p>方法：打开检查中的console，以mac中的chrome为例如图：<br><img src="/2020/06/14/%E7%99%BE%E5%BA%A6%E4%BA%91%E5%80%8D%E9%80%9F/hello.jpg" alt="你想输入的替代文字"></p><p>输入如下代码：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">videojs.getPlayers(<span class="string">"video-player"</span>).html5player.tech_.setPlaybackRate(<span class="number">1.5</span>)</span><br></pre></td></tr></table></figure><p>1.5就是倍速，可以根据自己的要求改变</p><h3 id="PS：输入代码的时候必须要在视频播放的时候，现播放再放入代码并按下回车"><a href="#PS：输入代码的时候必须要在视频播放的时候，现播放再放入代码并按下回车" class="headerlink" title="PS：输入代码的时候必须要在视频播放的时候，现播放再放入代码并按下回车"></a>PS：输入代码的时候必须要在视频播放的时候，现播放再放入代码并按下回车</h3>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>百度云盘播放倍速需要VIP，考研党看视频课一倍速太慢需要提提速，又不想用插件，使用这个试试吧</p><a id="more"></a><p>浏览器：Chrome，火狐等</p><p>方法：打开检查中的console，以mac中的chrome为例如图：<br><img src="/2020/06/14/%E7%99%BE%E5%BA%A6%E4%BA%91%E5%80%8D%E9%80%9F/hello.jpg" alt="你想输入的替代文字"></p><p>输入如下代码：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">videojs.getPlayers(<span class="string">"video-player"</span>).html5player.tech_.setPlaybackRate(<span class="number">1.5</span>)</span><br></pre></td></tr></table></figure><p>1.5就是倍速，可以根据自己的要求改变</p><p><strong>PS：输入代码的时候必须要在视频播放的时候，先播放再放入代码并按下回车</strong></p>]]></content>
     
     <summary type="html">
     
