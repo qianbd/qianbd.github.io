@@ -75,7 +75,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">2.6k</span>
+            <span class="post-count">4.1k</span>
         </span>
     </span>
 
@@ -84,7 +84,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">11 min</span>
+            <span class="post-count">16 min</span>
         </span>
     </span>
 </div>
@@ -190,7 +190,70 @@
 <p><img src="/2020/07/19/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E2%80%94%E2%80%94%E6%A0%91%E4%B8%8E%E4%BA%8C%E5%8F%89%E6%A0%91/h.jpg" alt="picture_2"><br><strong>3.孩子兄弟表示法</strong></p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">CSNode</span>&#123;</span></span><br><span class="line">    ElemType data;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">CSNode</span> *<span class="title">firstchild</span>,*<span class="title">nextsibling</span>;</span> <span class="comment">//第一个孩子和右兄弟指针</span></span><br><span class="line">&#125;CSNode,*CSTree;</span><br></pre></td></tr></table></figure>
 <p><img src="/2020/07/19/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E2%80%94%E2%80%94%E6%A0%91%E4%B8%8E%E4%BA%8C%E5%8F%89%E6%A0%91/x.jpg" alt="picture_3"></p>
-<h3 id="5-4-2-树、森林与二叉树的转换"><a href="#5-4-2-树、森林与二叉树的转换" class="headerlink" title="5.4.2 树、森林与二叉树的转换"></a>5.4.2 树、森林与二叉树的转换</h3>
+<h3 id="5-4-2-树、森林与二叉树的转换"><a href="#5-4-2-树、森林与二叉树的转换" class="headerlink" title="5.4.2 树、森林与二叉树的转换"></a>5.4.2 树、森林与二叉树的转换</h3><p><strong>树转换二叉树</strong></p>
+<ol>
+<li>加线。就是在所有兄弟结点之间加一条连线；</li>
+<li>抹线。就是对树中的每个结点，只保留他与第一个孩子结点之间的连线，删除它与其它孩子结点之间的连线；</li>
+<li>旋转。就是以树的根结点为轴心，将整棵树顺时针旋转一定角度，使之结构层次分明。<br><img src="/2020/07/19/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E2%80%94%E2%80%94%E6%A0%91%E4%B8%8E%E4%BA%8C%E5%8F%89%E6%A0%91/a.jpg" alt="pp"></li>
+</ol>
+<p><strong>森林转换为二叉树</strong><br>森林是由若干棵树组成，可以将森林中的每棵树的根结点看作是兄弟，由于每棵树都可以转换为二叉树，所以森林也可以转换为二叉树。<br>将森林转换为二叉树的步骤是：</p>
+<ol>
+<li>先把每棵树转换为二叉树；</li>
+<li>第一棵二叉树不动，从第二棵二叉树开始，依次把后一棵二叉树的根结点作为前一棵二叉树的根结点的右孩子结点，用线连接起来。当所有的二叉树连接起来后得到的二叉树就是由森林转换得到的二叉树。<br><img src="/2020/07/19/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E2%80%94%E2%80%94%E6%A0%91%E4%B8%8E%E4%BA%8C%E5%8F%89%E6%A0%91/b.jpg" alt="e"></li>
+</ol>
+<p><strong>二叉树转换为树</strong><br>二叉树转换为树是树转换为二叉树的逆过程，其步骤是：</p>
+<ol>
+<li>若某结点的左孩子结点存在，将左孩子结点的右孩子结点、右孩子结点的右孩子结点……都作为该结点的孩子结点，将该结点与这些右孩子结点用线连接起来；</li>
+<li>删除原二叉树中所有结点与其右孩子结点的连线；</li>
+<li>整理（1）和（2）两步得到的树，使之结构层次分明。<br><img src="/2020/07/19/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E2%80%94%E2%80%94%E6%A0%91%E4%B8%8E%E4%BA%8C%E5%8F%89%E6%A0%91/c.jpg" alt="dd"></li>
+</ol>
+<h3 id="5-4-3-树和森林的遍历"><a href="#5-4-3-树和森林的遍历" class="headerlink" title="5.4.3 树和森林的遍历"></a>5.4.3 树和森林的遍历</h3><p><strong>树的遍历</strong></p>
+<ul>
+<li>先根遍历：先访问根结点，再依次遍历根结点的每棵子树</li>
+<li>后根遍历：先依次遍历根结点的每棵子树，再访问根结点</li>
+</ul>
+<p><strong>森林的遍历</strong></p>
+<ul>
+<li>先序遍历森林<ul>
+<li>访问森林中第一棵树的根结点</li>
+<li>先序遍历第一棵树中根结点的子树森林</li>
+<li>先序遍历除去第一棵树之后剩余的树构成的森林</li>
+</ul>
+</li>
+<li>中序遍历森林<ul>
+<li>中序遍历森林中第一棵树的根结点的子树森林</li>
+<li>访问第一棵树的根结点</li>
+<li>中序遍历除去第一棵树之后剩余的树构成的森林</li>
+</ul>
+</li>
+</ul>
+<h2 id="5-5-树与二叉树的应用"><a href="#5-5-树与二叉树的应用" class="headerlink" title="5.5 树与二叉树的应用"></a>5.5 树与二叉树的应用</h2><h3 id="5-5-1-二叉排序树-BST"><a href="#5-5-1-二叉排序树-BST" class="headerlink" title="5.5.1 二叉排序树(BST)"></a>5.5.1 二叉排序树(BST)</h3><p><strong>1.二叉排序树的定义</strong><br>若左子树非空，则左子树上所有结点的值均小于根结点的值<br>若右子树非空，则右子树上所有结点的值均大于根结点的值<br>左、右子树也分别是一棵二叉排序树</p>
+<p><strong>2.二叉排序树的查找</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">BSTNode</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> key;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">BSTNode</span> *<span class="title">lchild</span>,*<span class="title">rchild</span>;</span></span><br><span class="line">&#125;BSTNode,*BSTree;</span><br><span class="line"><span class="comment">//非递归查找，最坏空间复杂度O(1)</span></span><br><span class="line"><span class="function">BSTNode *<span class="title">BST_Search</span><span class="params">(BSTree T,<span class="keyword">int</span> key)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">while</span>(T != <span class="literal">NULL</span> &amp;&amp; key != T-&gt;key) &#123; <span class="comment">//若树空或等于根结点值，则结束循环</span></span><br><span class="line">        <span class="keyword">if</span>(key &lt; T-&gt;key)</span><br><span class="line">            T = T-&gt;lchild;</span><br><span class="line">        <span class="keyword">else</span> </span><br><span class="line">            T = T-&gt;rchild;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//递归查找，最坏空间复杂度O(h)</span></span><br><span class="line"><span class="function">BSTNode *<span class="title">BST_Search</span><span class="params">(BSTree T,<span class="keyword">int</span> key)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(T == <span class="literal">NULL</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">NULL</span>;    <span class="comment">//查找失败</span></span><br><span class="line">    <span class="keyword">if</span>(key == T-&gt;key)</span><br><span class="line">        <span class="keyword">return</span> T;       <span class="comment">//查找成功</span></span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(key &lt; T-&gt;key)</span><br><span class="line">        <span class="keyword">return</span> BST_Search(T-&gt;lchild,key)</span><br><span class="line">    <span class="keyword">else</span> </span><br><span class="line">        <span class="keyword">return</span> BST_Search(T-&gt;rchild,key)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>3.二叉排序树的插入</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">BST_Insert</span><span class="params">(BSTree &amp;T,<span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(T == <span class="literal">NULL</span>)&#123;                      <span class="comment">//原树为空，新插入的记录为根结点</span></span><br><span class="line">        T = (BSTree)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(BSTNode));</span><br><span class="line">        T-&gt;key = k;</span><br><span class="line">        T-&gt;lchild = T-&gt;rchild = <span class="literal">NULL</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(k == T-&gt;key)                <span class="comment">//树中存在相同关键字的结点，插入失败</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;   </span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(k &lt; T-&gt;key)                 <span class="comment">//插入到T的左子树</span></span><br><span class="line">        <span class="keyword">return</span> BST_Insert(T-&gt;lchild,k);</span><br><span class="line">    <span class="keyword">else</span>                                <span class="comment">//插入到T的右子树</span></span><br><span class="line">        <span class="keyword">return</span> BST_Insert(T-&gt;rchild,k);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>4.二叉排序树的构造</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Creat_BST</span><span class="params">(BSTree &amp;T,<span class="keyword">int</span> str[],<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    T = <span class="literal">NULL</span>;                   <span class="comment">//初始化T为空树</span></span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(i &lt; n) &#123;              <span class="comment">//依次将每个关键字插入到二叉排序树中</span></span><br><span class="line">        BST_Insert(T,str[i]);</span><br><span class="line">        i++;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>5.二叉排序树的删除</strong><br>删除结点时，不能把以该结点为根的子树上的结点都删除</p>
+<p>This is an <a href="https://www.cnblogs.com/-beyond/p/6202108.html/" target="_blank" rel="noopener" title="二叉排序树的删除">二叉排序树的删除的博客链接</a>. </p>
+<p><strong>6.二叉排序树的查找效率分析</strong><br>ASL，详情见王道P184</p>
+<h3 id="5-5-2-平衡二叉树"><a href="#5-5-2-平衡二叉树" class="headerlink" title="5.5.2 平衡二叉树"></a>5.5.2 平衡二叉树</h3><p><strong>1.平衡二叉树的定义</strong><br>保证任意结点的左右子树高度差的绝对值不超过1<br><strong>平衡因子</strong>：左子树与右子树的高度差为该结点的平衡因子<br><strong>2.平衡二叉树的插入</strong><br>四种旋转(王道书p187)</p>
+<ul>
+<li>LL平衡旋转(右单旋转)</li>
+<li>RR平衡旋转(左单旋转)</li>
+<li>LR平衡旋转(先左后右双旋转)</li>
+<li>RL平衡旋转(先右后左双旋转)</li>
+</ul>
+<p>This is an <a href="https://blog.csdn.net/qq_24336773/article/details/81712866/" target="_blank" rel="noopener" title="平衡二叉树的旋转">平衡二叉树的旋转</a>. </p>
+<h3 id="5-5-3-哈夫曼树和哈夫曼编码"><a href="#5-5-3-哈夫曼树和哈夫曼编码" class="headerlink" title="5.5.3 哈夫曼树和哈夫曼编码"></a>5.5.3 哈夫曼树和哈夫曼编码</h3><p><strong>1.哈夫曼树的定义</strong><br><strong>带权路径长度</strong>：从树的根到任意结点的路径长度(经过的边数)与该结点上权值的乘积<br><strong>树的带权路径长度</strong>：所有的叶结点的带权路径长度之和<br><strong>2.哈夫曼树的构造</strong><br>假设有n个权值，则构造出的哈夫曼树有n个叶子结点。 n个权值分别设为 w1、w2、…、wn，则哈夫曼树的构造规则为：</p>
+<ol>
+<li>将w1、w2、…，wn看成是有n 棵树的森林(每棵树仅有一个结点)；</li>
+<li>在森林中选出两个根结点的权值最小的树合并，作为一棵新树的左、右子树，且新树的根结点权值为其左、右子树根结点权值之和；</li>
+<li>从森林中删除选取的两棵树，并将新树加入森林；</li>
+<li>重复(2)、(3)步，直到森林中只剩一棵树为止，该树即为所求得的哈夫曼树</li>
+</ol>
+<p>This is an <a href="https://www.cnblogs.com/yeya/p/9835895.html/" target="_blank" rel="noopener" title="哈夫曼树与哈夫曼编码">哈夫曼树与哈夫曼编码</a>. </p>
+
       
       <!-- reward -->
       
