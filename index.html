@@ -77,6 +77,80 @@
     
     
     
+    <article id="post-数据结构——树与二叉树" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2020/07/19/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E2%80%94%E2%80%94%E6%A0%91%E4%B8%8E%E4%BA%8C%E5%8F%89%E6%A0%91/"
+    >数据结构——树与二叉树</a> 
+</h2>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2020/07/19/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E2%80%94%E2%80%94%E6%A0%91%E4%B8%8E%E4%BA%8C%E5%8F%89%E6%A0%91/" class="article-date">
+  <time datetime="2020-07-19T05:52:25.000Z" itemprop="datePublished">2020-07-19</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>
+  </div>
+
+      
+      
+      
+    </div>
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <h1 id="第五章-树与二叉树"><a href="#第五章-树与二叉树" class="headerlink" title="第五章 树与二叉树"></a>第五章 树与二叉树</h1><h2 id="5-1-树的基本概念"><a href="#5-1-树的基本概念" class="headerlink" title="5.1 树的基本概念"></a>5.1 树的基本概念</h2><h3 id="5-1-1-树的定义"><a href="#5-1-1-树的定义" class="headerlink" title="5.1.1 树的定义"></a>5.1.1 树的定义</h3>
+      
+      <a class="article-more-link" href="/2020/07/19/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E2%80%94%E2%80%94%E6%A0%91%E4%B8%8E%E4%BA%8C%E5%8F%89%E6%A0%91/">阅读更多...</a>
+      
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%A0%91/" rel="tag">树</a></li></ul>
+
+
+    </footer>
+
+  </div>
+
+  
+
+  
+  
+  
+
+  
+  
+  
+
+</article>
+    
     <article id="post-数据结构——串" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
@@ -117,84 +191,10 @@
       
 
       
-      <h1 id="第四章-串"><a href="#第四章-串" class="headerlink" title="第四章 串"></a>第四章 串</h1><h2 id="4-1-串的定义和实现"><a href="#4-1-串的定义和实现" class="headerlink" title="4.1 串的定义和实现"></a>4.1 串的定义和实现</h2><h3 id="4-1-1-串的定义"><a href="#4-1-1-串的定义" class="headerlink" title="4.1.1 串的定义"></a>4.1.1 串的定义</h3><p>串(string)是由零个或多个字符组成的有限序列。一般记为<br><strong><center>S = ‘a<sub>1</sub>a<sub>2</sub>…a<sub>n</sub>‘(n&gt;=0)</center></strong><br>子串：串中任意个连续的字符组成的子序列<br>主串：包含子串的串</p>
-<h3 id="4-1-2-串的存储结构"><a href="#4-1-2-串的存储结构" class="headerlink" title="4.1.2 串的存储结构"></a>4.1.2 串的存储结构</h3><p><strong>1.定长顺序存储表示</strong></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAXLEN 255</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> &#123;</span></span><br><span class="line">    <span class="keyword">char</span> ch[MAXLEN];</span><br><span class="line">    <span class="keyword">int</span> length;</span><br><span class="line">&#125;SString;</span><br></pre></td></tr></table></figure>
-<p>串长两种表示方法</p>
-<ul>
-<li>用一个额外的变量len来存放串的长度</li>
-<li>在串值后面加一个不计入串长的结束标记字符”\0”，此时的串长为隐含值</li>
-</ul>
-<p><strong>2.堆分配存储方式</strong></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">    <span class="keyword">char</span> *ch;       <span class="comment">//按串长分配存储区，ch指向串的基地址</span></span><br><span class="line">    <span class="keyword">int</span> length;</span><br><span class="line">&#125;HString;</span><br></pre></td></tr></table></figure>
-<p>用malloc()和free()函数来完成动态存储管理。</p>
-<p><strong>块链存储表示</strong></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> &#123;</span></span><br><span class="line">    <span class="keyword">char</span> ch[CHUNKSIZE];</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">Chunk</span> *<span class="title">next</span>;</span></span><br><span class="line">&#125; Chunk;</span><br></pre></td></tr></table></figure>
-<h3 id="4-1-3-串的基本操作"><a href="#4-1-3-串的基本操作" class="headerlink" title="4.1.3 串的基本操作"></a>4.1.3 串的基本操作</h3><ul>
-<li>StrAssign(&amp;T,chars)：赋值操作。把串T赋值为chars</li>
-<li>StrCopy(&amp;T,S)：复制操作，S复制得T</li>
-<li>StrEmpty(S)：判空操纵，空返回TRUE</li>
-<li>StrCompare(S,T)：比较操作，S&gt;T，返回值&gt;0，S&lt;T，返回值&lt;0，S=T，返回值=0</li>
-<li>StrLength(S)：求串长</li>
-<li>SubString(&amp;Sub,S,pos,len)：求子串。用Sub返回串S的第pos个字符起长度为len的子串</li>
-<li>Concat(&amp;T,S1,S2)：串联接</li>
-<li>Index(S,T)：定位操作。若主串S中存在与串T值相同的子串，则返回它在主串S中第一次出现的位置，否则函数值为0</li>
-<li>CleanString(&amp;S)：清空操作。将S清为空串</li>
-<li>DestroyString(&amp;S)：销毁串</li>
-</ul>
-<h2 id="4-2-串的模式匹配"><a href="#4-2-串的模式匹配" class="headerlink" title="4.2 串的模式匹配"></a>4.2 串的模式匹配</h2><h3 id="4-2-1-简单的模式匹配算法"><a href="#4-2-1-简单的模式匹配算法" class="headerlink" title="4.2.1 简单的模式匹配算法"></a>4.2.1 简单的模式匹配算法</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Index</span><span class="params">(SString S,SString T)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">1</span>, j = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> (i &lt;= S.length &amp;&amp; j &lt;= T.length) &#123;</span><br><span class="line">        <span class="keyword">if</span> (S.ch[i] == T.ch[j]) &#123;</span><br><span class="line">            ++i;</span><br><span class="line">            ++j;         <span class="comment">//继续比较后继字符</span></span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            i = i - j + <span class="number">2</span>;</span><br><span class="line">            j = <span class="number">1</span>;             <span class="comment">//指针后退重新开始匹配</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (j &gt; T.length)</span><br><span class="line">        <span class="keyword">return</span> i - T.length;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="4-2-2-改进的模式匹配算法——KMP算法"><a href="#4-2-2-改进的模式匹配算法——KMP算法" class="headerlink" title="4.2.2 改进的模式匹配算法——KMP算法"></a>4.2.2 改进的模式匹配算法——KMP算法</h3><p><strong>next[j]的含义</strong>： 在子串的第j个字符与主串发生失配时，则跳到子串的next[j]位置重新与主串当前位置进行比较<br>|  编号   | 1 | 2 | 3 | 4 | 5 |<br>|  –  | –  | – | – | – | –|<br>| S  | a | b | c | a | c |<br>| next| 0 | 1 | 1 | 1 | 2 |</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">get_next</span><span class="params">(SString T,<span class="keyword">int</span> next[])</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">1</span>,j = <span class="number">0</span>;</span><br><span class="line">    next[<span class="number">1</span>] = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(i &lt; T.length) &#123;</span><br><span class="line">        <span class="keyword">if</span>(j == <span class="number">0</span> || T.ch[i] == T.ch[j]) &#123;</span><br><span class="line">            ++i;</span><br><span class="line">            ++j;</span><br><span class="line">            next[i] = j;            <span class="comment">//若pi = pj,则next[j+1]=next[j]+1</span></span><br><span class="line">        &#125; <span class="keyword">else</span></span><br><span class="line">            j = next[j];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Index_KMP</span><span class="params">(SString S,SString T,<span class="keyword">int</span> next[])</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">1</span>,j = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(i &lt;= S.length &amp;&amp; j &lt;= T.length) &#123;</span><br><span class="line">        <span class="keyword">if</span>(j == <span class="number">0</span> || S.ch[i] == T.ch[j]) &#123;</span><br><span class="line">            ++i;   </span><br><span class="line">            ++j;                    <span class="comment">//继续比较后继字符</span></span><br><span class="line">        &#125; <span class="keyword">else</span> </span><br><span class="line">            j = next[j];            <span class="comment">//模式串向右移动</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(j &gt; T.length)                <span class="comment">//匹配成功</span></span><br><span class="line">        <span class="keyword">return</span> i - T.length; </span><br><span class="line">    <span class="keyword">else</span> </span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;   </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="4-2-3-KMP算法的进一步优化"><a href="#4-2-3-KMP算法的进一步优化" class="headerlink" title="4.2.3 KMP算法的进一步优化"></a>4.2.3 KMP算法的进一步优化</h3><table>
-<thead>
-<tr>
-<th>主串</th>
-<th>a</th>
-<th>a</th>
-<th>a</th>
-<th>b</th>
-<th>a</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>模式</td>
-<td>a</td>
-<td>a</td>
-<td>a</td>
-<td>a</td>
-<td>b</td>
-</tr>
-<tr>
-<td>j</td>
-<td>1</td>
-<td>2</td>
-<td>3</td>
-<td>4</td>
-<td>5</td>
-</tr>
-<tr>
-<td>next[j]</td>
-<td>0</td>
-<td>1</td>
-<td>2</td>
-<td>3</td>
-<td>4</td>
-</tr>
-<tr>
-<td>nextval[j]</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>4</td>
-</tr>
-</tbody></table>
-<blockquote>
-<p>当i=4、j=4时，s<sub>4</sub>跟p<sub>4</sub>(b!=a)失配，如果用之前的next数组还需要进行s<sub>4</sub>与p<sub>3</sub>，s<sub>4</sub>与p<sub>2</sub>，s<sub>4</sub>与p<sub>1</sub>这三次比较，事实上，p<sub>next[4]=3</sub>=p<sub>4</sub>=a、p<sub>next[2]=1</sub>=p<sub>2</sub>=a，显然后面3次用一个和p<sub>4</sub>相同的字符跟s<sub>4</sub>比较毫无意义，必然失配。问题在于不应该出现p<sub>j</sub>=p<sub>next[j]</sub>，理由是p<sub>j</sub>!=s<sub>j</sub>时，下次的匹配必然是p<sub>next[j]</sub>跟s<sub>j</sub>比较，如果p<sub>j</sub>=p<sub>next[j]</sub>，那么相当于拿一个和p<sub>j</sub>相等的字符跟s<sub>j</sub>比较，这必然导致继续失配。因此，如果出现了p<sub>j</sub>=p<sub>next[j]</sub>，则需要再次递归，将next[j]修正为next[next[j]]，直至两者不相等为止，更新后的数组命名为nextval</p>
-</blockquote>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">get_nextval</span><span class="params">(SString T,<span class="keyword">int</span> nextval[])</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">1</span>,j = <span class="number">0</span>;</span><br><span class="line">    nextval[<span class="number">1</span>] = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(i &lt; T.length) &#123;</span><br><span class="line">        <span class="keyword">if</span>(j == <span class="number">0</span> || T.ch[i] == T.ch[j]) &#123;</span><br><span class="line">            ++i;</span><br><span class="line">            ++j;</span><br><span class="line">            <span class="keyword">if</span>(T.ch[i] != T.ch[j])</span><br><span class="line">                nextval[i] = j;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                nextval[i] = nextval[j];</span><br><span class="line">        &#125; <span class="keyword">else</span></span><br><span class="line">            j = nextval[j];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+      <h1 id="第四章-串"><a href="#第四章-串" class="headerlink" title="第四章 串"></a>第四章 串</h1><h2 id="4-1-串的定义和实现"><a href="#4-1-串的定义和实现" class="headerlink" title="4.1 串的定义和实现"></a>4.1 串的定义和实现</h2><h3 id="4-1-1-串的定义"><a href="#4-1-1-串的定义" class="headerlink" title="4.1.1 串的定义"></a>4.1.1 串的定义</h3>
+      
+      <a class="article-more-link" href="/2020/07/17/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E2%80%94%E2%80%94%E4%B8%B2/">阅读更多...</a>
+      
       
       <!-- reward -->
       
@@ -265,7 +265,7 @@
       
 
       
-      <h1 id="第三章-栈和队列"><a href="#第三章-栈和队列" class="headerlink" title="第三章 栈和队列"></a>第三章 栈和队列</h1><h2 id="3-1-栈"><a href="#3-1-栈" class="headerlink" title="3.1 栈"></a>3.1 栈</h2><h3 id="3-1-1-栈的基本概念"><a href="#3-1-1-栈的基本概念" class="headerlink" title="3.1.1 栈的基本概念"></a>3.1.1 栈的基本概念</h3><p>1.栈的定义：只允许在一端进行插入或删除操作的线性表<br>n个不同的元素进栈，出栈元素不同排列的个数为 <img src="/2020/07/16/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E2%80%94%E2%80%94%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97/pic2.jpg" alt="picture_3"></p>
+      <h1 id="第三章-栈和队列"><a href="#第三章-栈和队列" class="headerlink" title="第三章 栈和队列"></a>第三章 栈和队列</h1><h2 id="3-1-栈"><a href="#3-1-栈" class="headerlink" title="3.1 栈"></a>3.1 栈</h2><h3 id="3-1-1-栈的基本概念"><a href="#3-1-1-栈的基本概念" class="headerlink" title="3.1.1 栈的基本概念"></a>3.1.1 栈的基本概念</h3>
       
       <a class="article-more-link" href="/2020/07/16/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E2%80%94%E2%80%94%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97/">阅读更多...</a>
       
